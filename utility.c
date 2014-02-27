@@ -1,13 +1,3 @@
-/* utility.cpp
- *
- * Mason Fabel                fabe0940@vandals.uidaho.edu
- * CS 121 Section 2 Bolden    g++ (GCC) 4.4.7
- * 02/20                      x86_64 GNU/Linux 
- *
- * General, project-independant utility function implementation.
- *-----------------------------------------------------------------
- */
-
 #include <stdio.h>
 #include <stdlib.h>
 
