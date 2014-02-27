@@ -1,7 +1,7 @@
 CC = gcc
 WARNINGS = -ansi -pedantic -Wall -Wextra -D__USE_FIXED_PROTOTYPES__ -std=c89
 CFLAGS = $(WARNINGS)
-OBJ = main.o
+OBJ = main.o utility.o
 #LIBS = -lncurses
 APPLICATION_NAME = stats
 
@@ -18,6 +18,9 @@ $(APPLICATION_NAME) : $(OBJ)
 
 main.o : main.c
 	$(CC) $(CFLAGS) -c main.c $(LIBS)
+
+utility.o : utility.c utility.h constants.h
+	$(CC) $(CFLAGS) -c utility.c $(LIBS)
 
 clean :
 	rm -f $(APPLICATION_NAME) $(OBJ)
