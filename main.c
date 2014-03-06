@@ -55,11 +55,11 @@ int main(int argc, char** argv) {
 	stddev = calcStdDev(head, mean);
 
 	/* Print output */
-	printf("Statistics Calculator v.%i.%i.%i by Mason Fabel\n", 0, 0, 0);
-	printf("  minimum: %f\n", min);
-	printf("  maximum: %f\n", max);
-	printf("  mean: %f\n", mean);
-	printf("  standard deviation: %f\n", stddev);
+	fprintf(fout, "Statistics Calculator v.%i.%i.%i by Mason Fabel\n", 0, 1, 0);
+	fprintf(fout, "  minimum: %f\n", min);
+	fprintf(fout, "  maximum: %f\n", max);
+	fprintf(fout, "  mean: %f\n", mean);
+	fprintf(fout, "  standard deviation: %f\n", stddev);
 
 	/* Close open files */
 	fclose(fin);
