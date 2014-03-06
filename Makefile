@@ -5,7 +5,7 @@ OBJ = main.o list.o utility.o
 #LIBS = -lncurses
 APPLICATION_NAME = stats
 
-.PHONY : all rebuild clean
+.PHONY : all rebuild clean cleanMain cleanListTest
 
 all : $(APPLICATION_NAME)
 
@@ -15,6 +15,8 @@ listTest : listTest.o list.o
 rebuild :
 	make clean
 	make all
+
+clean : cleanMain cleanListTest
 
 $(APPLICATION_NAME) : $(OBJ)
 	$(CC) $(CFLAGS) $(OBJ) -o $(APPLICATION_NAME) $(LIBS)
@@ -31,5 +33,8 @@ listTest.o : listTest.c list.h
 utility.o : utility.c utility.h constants.h
 	$(CC) $(CFLAGS) -c utility.c $(LIBS)
 
-clean :
-	rm -f $(APPLICATION_NAME) $(OBJ)
+cleanMain : 
+	rm -f $(OBJ) $(APPLICATION_NAME)
+
+cleanListTest : 
+	rm -f listTest.o list.o listTest
