@@ -1,8 +1,8 @@
 CC = gcc
 WARNINGS = -ansi -pedantic -Wall -Wextra -D__USE_FIXED_PROTOTYPES__ -std=c89
 CFLAGS = $(WARNINGS)
-OBJ = main.o list.o utility.o
-#LIBS = -lncurses
+OBJ = main.o calc.o list.o utility.o
+LIBS = -lm
 APPLICATION_NAME = stats
 
 .PHONY : all rebuild clean cleanMain cleanListTest
@@ -23,6 +23,9 @@ $(APPLICATION_NAME) : $(OBJ)
 
 main.o : main.c
 	$(CC) $(CFLAGS) -c main.c $(LIBS)
+
+calc.o : calc.c calc.h list.h
+	$(CC) $(CFLAGS) -c calc.c $(LIBS)
 
 list.o : list.c list.h utility.h
 	$(CC) $(CFLAGS) -c list.c $(LIBS)

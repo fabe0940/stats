@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "calc.h"
 #include "list.h"
 #include "utility.h"
 
@@ -47,11 +48,18 @@ int main(int argc, char** argv) {
 		listAddToBack(&head, buff);
 	}
 
-	listPrint(&head);
-
 	/* Process list */
+	min = calcMin(head);
+	max = calcMax(head);
+	mean = calcMean(head);
+	stddev = calcStdDev(head, mean);
 
 	/* Print output */
+	printf("Statistics Calculator v.%i.%i.%i by Mason Fabel\n", 0, 0, 0);
+	printf("  minimum: %f\n", min);
+	printf("  maximum: %f\n", max);
+	printf("  mean: %f\n", mean);
+	printf("  standard deviation: %f\n", stddev);
 
 	/* Close open files */
 	fclose(fin);
