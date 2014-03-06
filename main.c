@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "list.h"
 #include "utility.h"
 
 int main(int argc, char** argv) {
@@ -10,6 +11,17 @@ int main(int argc, char** argv) {
 	float stddev;
 	FILE* fin;
 	FILE* fout;
+	listNodePtr head;
+
+	/* Initialize variables */
+	buff = 0.0;
+	min = 0.0;
+	max = 0.0;
+	mean = 0.0;
+	stddev = 0.0;
+	fin = NULL;
+	fout = NULL;
+	head = NULL;
 
 	/* Check for the proper arguments */
 	if(argc != 3) {
@@ -32,8 +44,10 @@ int main(int argc, char** argv) {
 
 	/* Read data from fin into the list */
 	while(fscanf(fin, "%f\n", &buff) != EOF) {
-		printf("%f\n", buff);
+		listAddToBack(&head, buff);
 	}
+
+	listPrint(&head);
 
 	/* Process list */
 

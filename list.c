@@ -11,7 +11,7 @@ void listPrint(listNodePtr* list) {
 	curr = *list;
 
 	while(curr != NULL) {
-		printf("%i\n", (*curr).data);
+		printf("%f\n", (*curr).data);
 		curr = (*curr).next;
 	}
 

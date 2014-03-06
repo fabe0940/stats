@@ -1,7 +1,7 @@
 #ifndef _LIST_H_
 #define _LIST_H_
 
-typedef int listType;
+typedef float listType;
 
 struct _listNode {
 	listType data;
