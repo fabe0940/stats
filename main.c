@@ -3,31 +3,45 @@
 #include "utility.h"
 
 int main(int argc, char** argv) {
-	char buff;
-	FILE* inf;
-	FILE* outf;
+	float buff;
+	float min;
+	float max;
+	float mean;
+	float stddev;
+	FILE* fin;
+	FILE* fout;
 
+	/* Check for the proper arguments */
 	if(argc != 3) {
 		usage(argv[0]);
 		exit(0);
 	}
 
-	inf = fopen(argv[1], "r");
-	outf = fopen(argv[2], "w");
+	/* Open the requested files */
+	fin = fopen(argv[1], "r");
+	fout = fopen(argv[2], "w");
 
-	if(inf == NULL) {
+	/* Check for file opening errors */
+	if(fin == NULL) {
 		error("unable to open input file.");
 	}
 
-	if(outf == NULL) {
+	if(fout == NULL) {
 		error("unable to open output file.");
 	}
 
-	buff = fgetc(inf);
-	while(buff != EOF) {
-		fputc(buff, outf);
-		buff = fgetc(inf);
+	/* Read data from fin into the list */
+	while(fscanf(fin, "%f\n", &buff) != EOF) {
+		printf("%f\n", buff);
 	}
+
+	/* Process list */
+
+	/* Print output */
+
+	/* Close open files */
+	fclose(fin);
+	fclose(fout);
 
 	exit(0);
 }
