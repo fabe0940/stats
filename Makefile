@@ -30,7 +30,7 @@ list.o : list.c list.h utility.h
 listTest.o : listTest.c list.h
 	$(CC) $(CFLAGS) -c listTest.c $(LIBS)
 
-utility.o : utility.c utility.h constants.h
+utility.o : utility.c utility.h
 	$(CC) $(CFLAGS) -c utility.c $(LIBS)
 
 cleanMain : 
