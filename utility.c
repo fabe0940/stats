@@ -1,3 +1,13 @@
+/* utility.c
+ *
+ * Mason Fabel                fabe0940@vandals.uidaho.edu
+ * CS 121 Section 2 Bolden    g++ (GCC) 4.4.7
+ * 03/06                      x86_64 GNU/Linux 
+ *
+ * General purpose helper functions
+ *-----------------------------------------------------------------
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "utility.h"

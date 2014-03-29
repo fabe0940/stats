@@ -1,5 +1,5 @@
 CC = gcc
-WARNINGS = -ansi -pedantic -Wall -Wextra -D__USE_FIXED_PROTOTYPES__ -std=c89
+WARNINGS = -ansi -pedantic -Wall -Wextra -D__USE_FIXED_PROTOTYPES__ -std=c99
 CFLAGS = $(WARNINGS)
 OBJ = main.o calc.o list.o utility.o
 LIBS = -lm

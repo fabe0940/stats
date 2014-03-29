@@ -1,4 +1,7 @@
 stats
 listTest
+inputGen*
 *.o
 *.swp
+*.dat
+*.txt
