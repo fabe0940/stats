@@ -1,3 +1,13 @@
+/* list.c
+ *
+ * Mason Fabel                fabe0940@vandals.uidaho.edu
+ * CS 121 Section 2 Bolden    g++ (GCC) 4.4.7
+ * 03/06                      x86_64 GNU/Linux 
+ *
+ * Linked list functions
+ *-----------------------------------------------------------------
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -5,6 +15,7 @@
 
 #include "list.h"
 
+/* Print the list */
 void listPrint(listNodePtr* list) {
 	listNodePtr curr;
 
@@ -18,6 +29,7 @@ void listPrint(listNodePtr* list) {
 	return;
 }
 
+/* Find the size of the list */
 int listGetSize(listNodePtr* list) {
 	int size = 0;
 	listNodePtr curr;
@@ -32,6 +44,7 @@ int listGetSize(listNodePtr* list) {
 	return size;
 }
 
+/* Add an element to the front of the list */
 void listAddToFront(listNodePtr* list, listType data) {
 	listNodePtr temp;
 
@@ -45,6 +58,7 @@ void listAddToFront(listNodePtr* list, listType data) {
 	return;
 }
 
+/* Add an element to the back of the list */
 void listAddToBack(listNodePtr* list, listType data) {
 	listNodePtr temp;
 	listNodePtr curr;
@@ -67,6 +81,7 @@ void listAddToBack(listNodePtr* list, listType data) {
 	return;
 }
 
+/* Remove an element from the front of the list */
 listType listRemoveFromFront(listNodePtr* list) {
 	listType result;
 	listNodePtr temp;
@@ -85,6 +100,7 @@ listType listRemoveFromFront(listNodePtr* list) {
 	return result;
 }
 
+/* Remove an element from the back of the list */
 listType listRemoveFromBack(listNodePtr* list) {
 	listType result;
 	listNodePtr temp;

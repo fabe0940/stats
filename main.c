@@ -1,3 +1,13 @@
+/* main.c
+ *
+ * Mason Fabel                fabe0940@vandals.uidaho.edu
+ * CS 121 Section 2 Bolden    g++ (GCC) 4.4.7
+ * 03/06                      x86_64 GNU/Linux 
+ *
+ * Finds the min, max, avg, and stddev of a file of floats.
+ *-----------------------------------------------------------------
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "calc.h"
